@@ -11,8 +11,8 @@ wsrep_sst_auth = '<%= "#{@wsrep_sst_user}:#{@wsrep_sst_password}" %>'
 <% end -%>
 wsrep_sst_method = <%= @wsrep_sst_method %>
 wsrep_slave_threads = <%= @wsrep_slave_threads %>
-wsrep_node_address = <%= instance_variable_get("@ipaddress_#{@wsrep_cluster_iface}") %>
-wsrep_node_incoming_address = <%= instance_variable_get("@ipaddress_#{@wsrep_cluster_iface}") %>
+wsrep_node_address = <%= @wsrep_node_address  %>
+wsrep_node_incoming_address = <%= @wsrep_node_incoming_address %>
 
 binlog_format = ROW
 default_storage_engine = InnoDB

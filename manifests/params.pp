@@ -23,6 +23,8 @@ class mariadb::params {
   $wsrep_cluster_peers   = undef
   $wsrep_cluster_port    = '4567'
   $wsrep_cluster_name    = undef
+  $wsrep_node_address    = $::ipaddress
+  $wsrep_node_incoming_address = $::ipaddress
   $wsrep_sst_user        = 'wsrep_sst'
   $wsrep_sst_user_peers  = '%'
   $wsrep_sst_password    = 'UNSET' # lint:ignore:security_password_in_code
@@ -145,8 +147,8 @@ class mariadb::params {
       'wsrep_provider'                  => $wsrep_provider,
       'wsrep_node_name'                 => $::hostname,
       'wsrep_slave_threads'             => '1', # $::processorcount * 2
-      'wsrep_node_address'              => $::ipaddress,
-      'wsrep_node_incoming_address'     => $::ipaddress,
+      'wsrep_node_address'              => $wsrep_node_address,
+      'wsrep_node_incoming_address'     => $wsrep_node_incoming_address,
       'binlog_format'                   => 'ROW',
       'default_storage_engine'          => 'InnoDB',
       'innodb_autoinc_lock_mode'        => '2',
