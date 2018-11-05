@@ -28,6 +28,8 @@ class mariadb::cluster::galera_config {
     'mysqld' => {
       'wsrep_cluster_address' => $_wsrep_cluster_address,
       'wsrep_cluster_name'    => $mariadb::cluster::wsrep_cluster_name,
+      'wsrep_node_address'    => $mariadb::cluster::wsrep_node_address,
+      'wsrep_node_incoming_address' => $mariadb::cluster::wsrep_node_incoming_address,
       'wsrep_sst_auth'        => $_wsrep_sst_auth,
       'wsrep_sst_method'      => $mariadb::cluster::wsrep_sst_method,
     },
