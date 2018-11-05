@@ -147,8 +147,8 @@ class mariadb::params {
       'wsrep_provider'                  => $wsrep_provider,
       'wsrep_node_name'                 => $::hostname,
       'wsrep_slave_threads'             => '1', # $::processorcount * 2
-      'wsrep_node_address'              => $wsrep_node_address,
-      'wsrep_node_incoming_address'     => $wsrep_node_incoming_address,
+#      'wsrep_node_address'              => $wsrep_node_address,
+#      'wsrep_node_incoming_address'     => $wsrep_node_incoming_address,
       'binlog_format'                   => 'ROW',
       'default_storage_engine'          => 'InnoDB',
       'innodb_autoinc_lock_mode'        => '2',
