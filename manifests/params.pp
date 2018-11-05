@@ -23,8 +23,8 @@ class mariadb::params {
   $wsrep_cluster_peers   = undef
   $wsrep_cluster_port    = '4567'
   $wsrep_cluster_name    = undef
-  $wsrep_node_address    = $::ipaddress
-  $wsrep_node_incoming_address = $::ipaddress
+#  $wsrep_node_address    = $::ipaddress
+#  $wsrep_node_incoming_address = $::ipaddress
   $wsrep_sst_user        = 'wsrep_sst'
   $wsrep_sst_user_peers  = '%'
   $wsrep_sst_password    = 'UNSET' # lint:ignore:security_password_in_code
