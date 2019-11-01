@@ -144,7 +144,6 @@ class mariadb::params {
   $galera_default_options = {
     'mysqld' => {
       'wsrep_on'                        => 'ON',
-      'wsrep_provider'                  => $wsrep_provider,
       'wsrep_node_name'                 => $::hostname,
       'wsrep_slave_threads'             => '1', # $::processorcount * 2
       'binlog_format'                   => 'ROW',
