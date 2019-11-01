@@ -32,6 +32,7 @@ class mariadb::cluster::galera_config {
       'wsrep_node_incoming_address' => $mariadb::cluster::wsrep_node_incoming_address,
       'wsrep_sst_auth'        => $_wsrep_sst_auth,
       'wsrep_sst_method'      => $mariadb::cluster::wsrep_sst_method,
+      'wsrep_provider'        => $mariadb::cluster::wsrep_provider,
     },
   }
   $options = mysql::normalise_and_deepmerge($options_from_params, $mariadb::cluster::galera_options)
